@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofilio</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <header class="main-head">
+      <h1 class="logo">Ahmed`s <span>Portofolio</span></h1>
+      <ul class="nav-links">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </ul>
+    </header>
+    <main class="main-page">
+      <section class="hero-sec">
+        <div class="hero-contant">
+          <img src="arrow-hero.png" alt="" />
+          <h3 class="hero-title">CREATIVE <span>WEB DEVELOPER</span></h3>
+          <div class="hero-btns">
+            <a
+              class="a1"
+              href="https://wa.me/+201060733679?text="
+              target="_blank"
+              >Hire Me</a
+            >
+            <a class="a2" href="#">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="heroSECBack.png" alt="" />
+          <img src="heroSecFront.png" alt="" />
+        </div>
+      </section>
+      <section class="about-sec">
+        <div class="about-contant">
+          <img src="arrow-about.png" alt="" />
+          <h3 class="about-title">About <span>Me</span></h3>
+          <p class="about-para">
+            As a front-end developer proficient in HTML, CSS, JavaScript,
+            React.js, and Tailwind CSS, I am dedicated to crafting engaging user
+            interfaces that combine functionality with aesthetic appeal.
+            Currently pursuing a degree in Computer Science at Mansoura
+            University, Faculty of Science, I am committed to continuous
+            learning and honing my ...
+            <span id="moreText" class="hidden"> </span>
+            <button
+              href="#"
+              id="readMoreBtn"
+              style="color: blue"
+              onclick="showMoreText()"
+            >
+              Read More
+            </button>
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="heroSECBack.png" alt="" />
+          <img src="about-sec-image.png" alt="" />
+        </div>
+      </section>
+      <section class="projects-sec" id="project">
+        <h2 class="project-title">My <span>Recent Work</span></h2>
+        <div class="project-category">
+          <button href="#" id="All" class="active" onclick="filterCards('All')">
+            All
+          </button>
+
+          <button href="#" id="UI" onclick="filterCards('html')">
+            HTML & CSS
+          </button>
+          <button href="#" id="HCJ" onclick="filterCards('js')">
+            HTML & CSS & JS
+          </button>
+        </div>
+        <div class="projects-cards">
+          <a
+            href="https://ahmedfathy112.github.io/island-food/"
+            target="_blank"
+            class="card html"
+          >
+            <div id="html1">
+              <img src="islandFood.png" alt="" />
+              <h2>Island Food</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/cave-dev/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js1">
+              <img src="caveDev.png" alt="" />
+              <h2>Cave Div</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/shofha-site/"
+            target="_blank"
+            class="card html"
+          >
+            <div id="html2">
+              <img src="shofhaa.png" alt="" />
+              <h2>Shoofha</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/Mooviie/"
+            target="_blank"
+            class="card html"
+          >
+            <div id="html3">
+              <img src="moviee.png" alt="" />
+              <h2>Moviee</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/Sure-Wheels/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js2">
+              <img src="sureWheels.png" alt="" />
+              <h2>Suer Wheels</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/PasswordConfirm/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js3">
+              <img src="passwordConfirm.png" alt="" />
+              <h2>Password Confirm</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/Weather-Dark/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js4">
+              <img src="WhetherDark.png" alt="" />
+              <h2>Whether app</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/News-Website/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js">
+              <img src="latestNews.png" alt="" />
+              <h2>Latest News</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/CalculateAge/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js">
+              <img src="calculateAge.png" alt="" />
+              <h2>Calculate Age</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/TODO-List/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js">
+              <img src="ToDoTasks.png" alt="" />
+              <h2>ToDo Tasks</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/stepProgress/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js">
+              <img src="StepProgress.png" alt="" />
+              <h2>Step Progress</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/rawaq-resturant/"
+            target="_blank"
+            class="card html"
+          >
+            <div id="html">
+              <img src="rawaqResturant.png" alt="" />
+              <h2>Rawaq Resturant</h2>
+            </div>
+          </a>
+          <a
+            href="https://ahmedfathy112.github.io/Muslim/"
+            target="_blank"
+            class="card js"
+          >
+            <div id="js">
+              <img src="muslim1.png" alt="" />
+              <h2>Muslim</h2>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
