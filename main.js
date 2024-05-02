@@ -52,31 +52,23 @@ function showMoreText() {
   }
 }
 
-// form section in contact sec
+// scroll to up page
 
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault(); // منع إرسال النموذج بشكل تلقائي
+// عند التمرير إلى أسفل الصفحة، عرض الزر
+window.onscroll = function () {
+  scrollFunction();
+};
 
-//     // قم بالحصول على قيم النموذج
-//     var name = document.getElementsByName("name")[0].value;
-//     var email = document.getElementsByName("email")[0].value;
-//     var message = document.getElementsByName("message")[0].value;
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("up").style.display = "block";
+  } else {
+    document.getElementById("up").style.display = "none";
+  }
+}
 
-//     // إرسال الرسالة باستخدام Email.js
-//     emailjs
-//       .send("service_ikqrpfd", "template_lcuiv89", {
-//         from_name: name,
-//         from_email: email,
-//         message_html: message,
-//       })
-//       .then(
-//         function (response) {
-//           console.log("Success!", response.status, response.text);
-//         },
-//         function (error) {
-//           console.log("Failed...", error);
-//         }
-//       );
-//   });
+// عند النقر على الزر، التمرير إلى أعلى الصفحة
+document.getElementById("up").addEventListener("click", function () {
+  document.body.scrollTop = 0; // لأن بعض المتصفحات لا تدعم document.documentElement
+  document.documentElement.scrollTop = 0;
+});
