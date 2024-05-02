@@ -11,8 +11,9 @@
       <h1 class="logo">Ahmed`s <span>Portofolio</span></h1>
       <ul class="nav-links">
         <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#about-sec" class="nav-link">About</a>
+        <a href="#contact-sec" class="nav-link">Contact</a>
+        <a href="#projects-sec" class="nav-link">Projects</a>
       </ul>
     </header>
     <main class="main-page">
@@ -209,7 +210,75 @@
           </a>
         </div>
       </section>
+      <section class="contact-sec">
+        <div class="contact-contant">
+          <img src="arrow-hero.png" class="arrow-contact" alt="" />
+          <h3 class="contact-title">Got a project in <span>mind?</span></h3>
+          <img src="contact-sec-image.png" alt="" />
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="named">
+            <div class="name-sec">
+              <label for="name"> Your Name </label>
+              <input type="text" name="name" placeholder="name" />
+            </div>
+            <div class="name-sec">
+              <label for="email"> Your Email </label>
+              <input type="email" name="email" placeholder="email" />
+            </div>
+          </div>
+          <div class="message">
+            <label for="message">Your Message</label>
+            <textarea
+              name="message"
+              placeholder="Message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button class="btn-send">Send Message</button>
+        </form>
+      </section>
     </main>
     <script src="main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "87ORHGWwR83mnzWwb",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // منع إرسال النموذج بشكل تلقائي
+
+          // قم بالحصول على قيم النموذج
+          var name = document.getElementsByName("name")[0].value;
+          var email = document.getElementsByName("email")[0].value;
+          var message = document.getElementsByName("message")[0].value;
+
+          // إرسال الرسالة باستخدام Email.js
+          emailjs
+            .send("service_q7ajl7d", "template_lcuiv89", {
+              from_name: name,
+              from_email: email,
+              message_html: message,
+            })
+            .then(
+              function (response) {
+                console.log("Success!", response.status, response.text);
+              },
+              function (error) {
+                console.log("Failed...", error);
+              }
+            );
+        });
+    </script>
   </body>
 </html>

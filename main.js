@@ -51,3 +51,32 @@ function showMoreText() {
     readMoreBtn.textContent = "Read More";
   }
 }
+
+// form section in contact sec
+
+// document
+//   .getElementById("contact-form")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault(); // منع إرسال النموذج بشكل تلقائي
+
+//     // قم بالحصول على قيم النموذج
+//     var name = document.getElementsByName("name")[0].value;
+//     var email = document.getElementsByName("email")[0].value;
+//     var message = document.getElementsByName("message")[0].value;
+
+//     // إرسال الرسالة باستخدام Email.js
+//     emailjs
+//       .send("service_ikqrpfd", "template_lcuiv89", {
+//         from_name: name,
+//         from_email: email,
+//         message_html: message,
+//       })
+//       .then(
+//         function (response) {
+//           console.log("Success!", response.status, response.text);
+//         },
+//         function (error) {
+//           console.log("Failed...", error);
+//         }
+//       );
+//   });

@@ -243,6 +243,90 @@ body {
   border-radius: 10px;
 }
 /* end projects sec */
+/* start contact-sec */
+.contact-sec {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.contact-contant {
+  position: relative;
+}
+.contact-sec .contact-contant .contact-title {
+  font-size: 45px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 50px;
+}
+.contact-title span {
+  color: #00adb5;
+}
+.contact-sec .contact-contant .img-contact {
+  margin-left: 70px;
+}
+.arrow-contact {
+  position: absolute;
+  left: -90px;
+}
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.named {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.name-sec {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  font-size: 19px;
+  color: #eee;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact-form input {
+  padding: 10px 15px;
+  width: 250px;
+  color: #fff;
+  background-color: #393e46;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.contact-form .message {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
+}
+.message textarea {
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #393e46;
+  color: #eee;
+}
+.btn-send {
+  display: inline-block;
+  padding: 10px 25px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background-color: #00adb5;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* end contact-sec */
 /* start query */
 @media screen and (max-width: 767px) {
   .hero-sec {
@@ -258,7 +342,9 @@ body {
     justify-content: center !important;
     text-align: center;
   }
-
+  .nav-link {
+    padding: 5px !important;
+  }
   .main-head .logo {
     font-size: 30px;
     margin-bottom: 20px;
@@ -279,6 +365,7 @@ body {
     flex-direction: column;
     justify-content: flex-start !important;
     min-height: 55vh !important;
+    margin-top: 150px;
   }
   .about-contant {
     width: 100% !important;
@@ -311,6 +398,39 @@ body {
   }
   .about-contant img {
     bottom: -169px;
+  }
+  .contact-sec {
+    flex-direction: column;
+    justify-content: flex-start !important;
+  }
+  .contact-contant {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .named {
+    flex-direction: column;
+  }
+  .name-sec {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .contact-form {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .message {
+    margin: 30px auto !important;
+  }
+  .message textarea {
+    width: 90%;
+  }
+  .btn-send {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .arrow-contact {
+    left: -25px;
+    top: 101px;
   }
 }
 /* end query */
