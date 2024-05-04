@@ -10,13 +10,11 @@ function filterCards(category) {
     }
   });
 
-  // Remove 'active' class from all links
   var links = document.querySelectorAll(".project-category button");
   links.forEach(function (link) {
     link.classList.remove("active");
   });
 
-  // Add 'active' class to the clicked link
   var activeLink = document.getElementById(category.toUpperCase());
   activeLink.classList.add("active");
 }
@@ -54,7 +52,6 @@ function showMoreText() {
 
 // scroll to up page
 
-// عند التمرير إلى أسفل الصفحة، عرض الزر
 window.onscroll = function () {
   scrollFunction();
 };
@@ -67,8 +64,15 @@ function scrollFunction() {
   }
 }
 
-// عند النقر على الزر، التمرير إلى أعلى الصفحة
 document.getElementById("up").addEventListener("click", function () {
-  document.body.scrollTop = 0; // لأن بعض المتصفحات لا تدعم document.documentElement
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+// tooggle-nav
+var toggleBtn = document.getElementById("tooggle-nav");
+var boxNav = document.getElementById("box-nav");
+
+function toggleBox() {
+  boxNav.classList.toggle("toggle-box");
+}
